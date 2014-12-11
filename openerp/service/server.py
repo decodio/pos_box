@@ -267,6 +267,7 @@ class ThreadedServer(CommonServer):
         # Force call to strptime just before starting the cron thread
         # to prevent time.strptime AttributeError within the thread.
         # See: http://bugs.python.org/issue7980
+        return None  # KGB
         datetime.datetime.strptime('2012-01-01', '%Y-%m-%d')
         for i in range(openerp.tools.config['max_cron_threads']):
             def target():
