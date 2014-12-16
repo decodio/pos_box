@@ -94,7 +94,7 @@ class File(Escpos):
 
     def _raw(self, msg):
         """ Print any command sent in raw format """
-        print msg
+        # print msg # prints garbage :(
         self.device.write(msg)
 
 
